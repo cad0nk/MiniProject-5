@@ -30,13 +30,13 @@ PCAP file – Sample provided for threat hunting simulation.
 <img width="1024" height="592" alt="image" src="https://github.com/user-attachments/assets/cabaa125-5a6f-42a0-8e65-267e59288da6" />
 <img width="1045" height="597" alt="image" src="https://github.com/user-attachments/assets/625ad848-fb6f-4694-9e3b-dc9515f09b45" />
 
-A. Rule Description: File deleted
-B. Timestamp: March 1, 2025 @ 23:48:02.094
-C. Source IP Address: 10.0.2.15
-D. User: root (executed by the logged-in user “hafizh”)
-E. Log Location / File Path: /root/chrome.deb
-F. Original Log Content: File /root/chrome.deb deleted — Mode: whodata
-G. Agent: ParrotOS
+- Rule Description: File deleted
+- Timestamp: March 1, 2025 @ 23:48:02.094
+- Source IP Address: 10.0.2.15
+- User: root (executed by the logged-in user “hafizh”)
+- Log Location / File Path: /root/chrome.deb
+- Original Log Content: File /root/chrome.deb deleted — Mode: whodata
+- Agent: ParrotOS
 
 Explanation : Based on the Wazuh log analysis, a file deletion activity was detected on an endpoint with the agent name ParrotOS. The triggered alert has the rule description “File deleted”, indicating that a monitored file system change was captured using the whodata mechanism.
 
@@ -54,14 +54,13 @@ This analysis demonstrates how Wazuh can effectively monitor critical endpoint a
 
 <img width="771" height="846" alt="image" src="https://github.com/user-attachments/assets/218b6ed2-0e18-4f13-bbfb-85c67c57e14e" />
 
-A. Rule Description: Successful sudo to ROOT executed
-B. Timestamp: March 2, 2025 at 05:05:23
-C. Source IP Address: 10.0.2.15
-D. User: root (executed by a user with sudo privileges)
-E. Log Location: journald
-F. Original Log Content:
-Mar 02 05:05:23 parrot sudo[5056]: root : TTY=pts/1 ; PWD=/home/hafizh/Desktop ; USER=root ; COMMAND=/usr/bin/systemctl stop apache2
-G. Agent: ParrotOS
+- Rule Description: Successful sudo to ROOT executed
+- Timestamp: March 2, 2025 at 05:05:23
+- Source IP Address: 10.0.2.15
+- User: root (executed by a user with sudo privileges)
+- Log Location: journald
+- Original Log Content: Mar 02 05:05:23 parrot sudo[5056]: root : TTY=pts/1 ; PWD=/home/hafizh/Desktop ; USER=root ; COMMAND=/usr/bin/systemctl stop apache2
+- Agent: ParrotOS
 
 Explanation : Based on the Wazuh log analysis, a privileged command execution was detected on an endpoint with the agent name ParrotOS. The triggered alert has the rule description “Successful sudo to ROOT executed”, indicating that a user successfully escalated privileges to execute a command as the root user.
 
